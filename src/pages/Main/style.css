@@ -1,0 +1,96 @@
+.container {
+
+  display: flex
+
+}
+
+header{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+
+  background-image: linear-gradient(to bottom,black 50% , rgb(43, 42, 42));
+  color: white;
+
+  position: relative;
+  left: 0;
+
+  height: 100vh;
+  padding: 2%;
+}
+
+header h2:nth-child(1){
+  animation: cubos 2s alternate infinite ease-in-out;
+
+  z-index: 1;
+}
+header h2:nth-child(2){
+  color: rgb(191, 127, 252);
+  position: relative;
+  top: -43.5vh;
+
+  z-index: 0;
+
+  animation: neon 2s alternate infinite ease-in-out;
+}
+
+header button{
+  all:unset;
+
+  background-color: rgb(103, 7, 167);
+  color: white;
+
+  width: 80%;
+  padding: 2%;
+  border-radius: 10px;
+  cursor: pointer;
+
+  border: white 2px solid;
+}
+header button:active{
+  background-color: rgb(171, 87, 228);
+}
+header button:hover{
+  transform: scale(1.05);
+}
+
+@keyframes cubos{
+  from{
+    color: rgb(103, 7, 167);
+  }
+  to{
+    color: rgb(191, 127, 252);
+  }
+}
+@keyframes neon{
+  from{
+    filter: drop-shadow( 0 0 0 rgb(191, 127, 252));
+  }
+  to{
+    filter: drop-shadow( 0 0 10px white);
+  }
+}
+
+main{
+  display: flex;
+  flex-wrap: wrap;
+
+  width: 100vw;
+  padding: 6%;
+
+  background-color: linear-gradient(to bottom, blueviolet);
+
+  /* gap:3%; da espassamento*/
+}
+
+main img{
+  padding: 5px;
+
+  height: 250px;
+  margin: 0 auto;
+}
+main img:hover{
+  transform: scale(1.05);
+}
